@@ -232,7 +232,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/begin_01/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/28/Hexo问题总结/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="17">
@@ -251,7 +251,173 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/11/25/begin_01/" itemprop="url">开始-debug-01</a></h1>
+                <a class="post-title-link" href="/2018/11/28/Hexo问题总结/" itemprop="url">未命名</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-28T22:48:17+08:00">
+                2018-11-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <hr>
+<h2 id="title：Hexo搭Blog的总结"><a href="#title：Hexo搭Blog的总结" class="headerlink" title="title：Hexo搭Blog的总结"></a>title：Hexo搭Blog的总结</h2><h2 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h2><ol>
+<li>新建repository</li>
+<li>装必备包 <ul>
+<li>node.js 通过nvm安装</li>
+<li>hexo 通过npm安装</li>
+<li>Git 通过homebrew安装</li>
+</ul>
+</li>
+<li>初始化blog <ul>
+<li><code>hexo init &lt;~/&gt;</code></li>
+</ul>
+</li>
+<li>新建文章<ul>
+<li>_post内添加<code>.md</code>文件</li>
+</ul>
+</li>
+<li>测试&amp;发布<ul>
+<li><code>hexo s</code>预览</li>
+<li><code>hexo g</code>生成文件</li>
+<li><code>hexo d</code> 发布</li>
+</ul>
+</li>
+<li>更新<ul>
+<li><code>sudo hexo clean &amp;&amp; sudo hexo g &amp;&amp; sudo hexo d</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">Hexo官方文档</a><br><a href="https://www.jianshu.com/p/4eaddcbe4d12" target="_blank" rel="noopener">5分钟 搭建免费个人博客</a><br><a href="https://www.jianshu.com/p/13e64c9e2295" target="_blank" rel="noopener">Mac上搭建基于GitHub的Hexo博客</a><br><a href="https://yeyouluo.github.io/2017/10/16/%E7%BB%86%E6%95%B0%E7%94%A8hexo%E6%90%AD%E5%BB%BAgithub%E5%8D%9A%E5%AE%A2%E8%B8%A9%E8%BF%87%E7%9A%84%E5%9D%91/" target="_blank" rel="noopener">细数用hexo搭建github博客踩过的坑（windows版）</a><br><a href="https://blog.csdn.net/tianbo_zhang/article/details/79137103" target="_blank" rel="noopener">Hexo，创建属于你自己的博客</a><br><a href="https://www.jianshu.com/p/e99ed60390a8" target="_blank" rel="noopener">20分钟简要教程</a></p>
+<h2 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h2><h4 id="找不到hexo"><a href="#找不到hexo" class="headerlink" title="找不到hexo"></a>找不到hexo</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR Local hexo not found in ~/</span><br><span class="line">ERROR Try running: &apos;npm install hexo --save&apos;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>github答案，重装npm install<br><code>rm -rf node_modules/ &amp;&amp; npm install</code><br><a href="https://github.com/hexojs/hexo/issues/2076" target="_blank" rel="noopener">https://github.com/hexojs/hexo/issues/2076</a></p>
+</li>
+<li><p>安装新版node<br><a href="https://help.appveyor.com/discussions/problems/13675-no-local-hexo-found-even-after-installing-it" target="_blank" rel="noopener">https://help.appveyor.com/discussions/problems/13675-no-local-hexo-found-even-after-installing-it</a></p>
+</li>
+</ul>
+<h4 id="hexo没反应"><a href="#hexo没反应" class="headerlink" title="hexo没反应"></a>hexo没反应</h4><p>尝试重装更新nvm、重装npm、重装hexo、再在目录下执行:</p>
+<p><code>rm -rf node_modules/ &amp;&amp; npm install</code></p>
+<h4 id="已发布，但未更新"><a href="#已发布，但未更新" class="headerlink" title="已发布，但未更新"></a>已发布，但未更新</h4><p><a href="https://segmentfault.com/q/1010000012969562" target="_blank" rel="noopener">https://segmentfault.com/q/1010000012969562</a></p>
+<h4 id="关于npm-install时遇到的权限问题"><a href="#关于npm-install时遇到的权限问题" class="headerlink" title="关于npm install时遇到的权限问题"></a>关于npm install时遇到的权限问题</h4><p><a href="https://www.cnblogs.com/zhenqichai/p/npm-eacces-permission-error-fix.html" target="_blank" rel="noopener">npm install时出现的EACCES: permission denied错误的可能有效的解决方案</a></p>
+<h2 id="拓展-amp-花絮"><a href="#拓展-amp-花絮" class="headerlink" title="拓展&amp;花絮"></a>拓展&amp;花絮</h2><ul>
+<li><a href="https://sooo17.github.io/2018/11/25/begin_01/" target="_blank" rel="noopener">填坑记</a></li>
+<li><a href="https://www.zhihu.com/question/21438053" target="_blank" rel="noopener">学习编程用什么做笔记比较好？(知乎)</a></li>
+</ul>
+<blockquote>
+<p>Written with <a href="https://stackedit.io/" target="_blank" rel="noopener">StackEdit</a>.</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/填坑记_hexo/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="17">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="We are free!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/25/填坑记_hexo/" itemprop="url">开始-debug-01</a></h1>
         
 
         <div class="post-meta">
@@ -329,256 +495,6 @@
 <p>Written with <a href="https://stackedit.io/" target="_blank" rel="noopener">StackEdit</a>.</p>
 </blockquote>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/24/begin/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="17">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="We are free!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/24/begin/" itemprop="url">开始</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-24T18:49:10+08:00">
-                2018-11-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>地址：<a href="https://sooo17.github.io/" target="_blank" rel="noopener">WE ARE FREE</a></p>
-<p>11.21晚，晕晕乎乎的就把第一版传上来了。今天打算更新以下，发现在博客目录下hexo居然不能用了。重复前日晚上的操作却一直无法成功。投一篇文章就讲讲怎样一坑放过又入一坑的过程吧。 = = 真麻烦</p>
-<h2 id="更新时的问题"><a href="#更新时的问题" class="headerlink" title="更新时的问题"></a>更新时的问题</h2><p>全部删掉 重新来过<br>删删删<br>创建文件<br>blog文件里npm install<br>配置config<br>git主题<br>这时候要新建一个MD文件了 先把这个半成品弄上去 一会儿再改！<br>上一步 git主题时候出现问题 下了好一会儿 报错！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">remote: Enumerating objects: 12033, done.</span><br><span class="line">error: RPC failed; curl 56 LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54</span><br><span class="line">fatal: The remote end hung up unexpectedly</span><br><span class="line">fatal: early EOF</span><br><span class="line">fatal: index-pack failed</span><br></pre></td></tr></table></figure></p>
-<p>重新来过 现在在滚进度条 = =<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Receiving objects:  99% (11994/12033), 12.67 MiB | 53.00 KiB/s</span><br></pre></td></tr></table></figure></p>
-<p>第二遍好了 = = 鬼晓得什么原因</p>
-<p>下面可以看预览了！ hexo s<br>猜 能不能跳转到 4000呢？</p>
-<p>果然 老问题！找不到hexo了 = =<br><strong>气气气气死了</strong></p>
-<p>发现Mac有好多好多隐藏文件！！！<br>显示隐藏文件方法：<br><strong><code>shift+⌘+.</code></strong><br>我是不是要删掉一些？！</p>
-<p>好吧 还原了 气死了QAQ</p>
-<blockquote>
-<p>Written with <a href="https://stackedit.io/" target="_blank" rel="noopener">StackEdit</a>.</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/Hey/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="17">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="We are free!">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/21/Hey/" itemprop="url">初篇</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T00:22:53+08:00">
-                2018-11-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1>
           
         
       
@@ -707,6 +623,125 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/Hey/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="17">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="We are free!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/21/Hey/" itemprop="url">初篇</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-21T00:22:53+08:00">
+                2018-11-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="序"><a href="#序" class="headerlink" title="序"></a>序</h1>
           
         
       
